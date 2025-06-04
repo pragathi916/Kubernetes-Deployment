@@ -5,4 +5,4 @@
   2. Blue-Green
   3. Rolling updates
      
-- Configured each deployment strategy to understand its behavior, advantages, and disadvantages, enabling informed decision-making for real-world applications
+- Configured each deployment strategy (on a simple website - index.html) to understand its behavior, advantages, and disadvantages, enabling informed decision-making for real-world applications
