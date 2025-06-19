@@ -28,6 +28,7 @@
   16. kubectl rollout undo deployment/rolling-updates-site
   17. kubectl port-forward service/rolling-updates-site 8082:80
 
-- Changes in the Website after Deployment: 
+- Changes in the Website after Deployment:
+  
   After deploying version 1, a small change was made to index.html by adding the line "DEPLOYED V2", and version 2 was created. As a 
   result, after the rolling update, this line becomes visible on the website. When rolled back, the line is removed, restoring the previous   version.
