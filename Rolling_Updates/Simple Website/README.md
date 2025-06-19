@@ -2,7 +2,6 @@
 
 - Environment Setup:
   Docker Desktop and Minikube are installed and running on the local machine (Windows 10).
-
   
 - Terminal commands run from the project folder are:
   
@@ -28,7 +27,6 @@
       *Roll back:*
   16. kubectl rollout undo deployment/rolling-updates-site
   17. kubectl port-forward service/rolling-updates-site 8082:80
-
 
 - Changes in the Website after Deployment: 
   After deploying version 1, a small change was made to index.html by adding the line "DEPLOYED V2", and version 2 was created. As a 
