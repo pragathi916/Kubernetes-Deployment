@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orgpulse-deployment
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: orgpulse
+  template:
+    metadata:
+      labels:
+        app: orgpulse
+    spec:
+      containers:
+      - name: orgpulse-container
+        image: sthuthi11/orgpulse:v1 #Changes to v1 or v2 based on the version
+        ports:
+        - containerPort: 80
+        env:
+        - name: DB_HOST
+          value: mysql
+        - name: DB_USER
+          value: root
+        - name: DB_PASS
+          value: root
+        - name: DB_NAME
+          value: organ
