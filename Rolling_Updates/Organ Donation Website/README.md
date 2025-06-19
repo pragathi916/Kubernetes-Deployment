@@ -33,6 +33,7 @@
   20. kubectl rollout undo deployment/orgpulse-deployment
   21. Go to http://localhost:30000
 
-- Changes in the Website after Deployment: 
+- Changes in the Website after Deployment:
+  
   After deploying version 1, a small change was made to index.php by adding a marquee element (having "Every donor is a hero. Register now!"), and version 2 was created. As a result, after the rolling update, this marquee is visible on the website. When rolled back, the it is removed, restoring the previous version.
 
