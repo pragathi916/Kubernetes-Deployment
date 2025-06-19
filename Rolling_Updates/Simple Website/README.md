@@ -1,4 +1,4 @@
-# ROLLING UPDATES DEPLOYMENT ON A SIMPLE WEBSITE
+# Rolling Updates Deployment on a Simple Website
 
 - Environment Setup:
   Docker Desktop and Minikube are installed and running on the local machine (Windows 10).
@@ -20,12 +20,12 @@
   12. docker build -t sthuthi11/rolling-updates-site:v2 .
   13. docker push sthuthi11/rolling-updates-site:v2
   
-  Rolling Updates:
+      Rolling Updates:
   14. kubectl set image deployment/rolling-updates-site rolling-updates=sthuthi11/rolling-updates-site:v2
   15. kubectl rollout status deployment/rolling-updates-site
   16. kubectl port-forward service/rolling-updates-site 8080:80
   
-  Roll back:
+      Roll back:
   16. kubectl rollout undo deployment/rolling-updates-site
   17. kubectl port-forward service/rolling-updates-site 8082:80
 
