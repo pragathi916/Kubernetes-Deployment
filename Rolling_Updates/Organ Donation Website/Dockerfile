@@ -3,10 +3,10 @@ FROM php:8.1-apache
 # Install mysqli extension
 RUN docker-php-ext-install mysqli
 
-# Enable Apache rewrite mod (optional)
+# Enable Apache rewrite mod
 RUN a2enmod rewrite
 
-# Copy your PHP files into the container
+# Copy PHP files into the container
 COPY . /var/www/html/
 
 # Set working directory
