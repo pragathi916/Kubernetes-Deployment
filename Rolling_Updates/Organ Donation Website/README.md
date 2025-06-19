@@ -1,4 +1,4 @@
-# Rolling Updates Deployment on a Organ Donation Website with a Database backend
+# Rolling Updates Deployment on a Website with a Database backend
 
 - Environment Setup:
   Docker Desktop is installed and is running on the local machine (Windows 10).
@@ -11,10 +11,12 @@
   4. kubectl apply -f phpmyadmin-service.yaml
   5. kubectl apply -f mysql-development.yaml
   6. kubectl apply -f mysql-service.yaml
+  
       *Optional:*
   7. kubectl get deployments
   8. kubectl get svc
   9. kubectl get pods
+  
       *Rolling Updates:*
   10. kubectl set image deployment/orgpulse-deployment orgpulse-container=sthuthi11/orgpulse:v1
   11. kubectl rollout status deployment/orgpulse-deployment
@@ -26,6 +28,7 @@
   17. kubectl apply -f phpmyadmin-deployment.yaml
   18. kubectl rollout status deployment/orgpulse-deployment
   19. Go to http://localhost:30000
+  
       *Roll back:*
   20. kubectl rollout undo deployment/orgpulse-deployment
   21. Go to http://localhost:30000
