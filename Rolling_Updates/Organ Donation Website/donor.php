@@ -6,10 +6,10 @@
   <title>Register As Donor Page</title>
   <style>
   body {
-    background-image: url('bg.jpg'); /* Change the background image URL here */
-    background-size: cover; /* Cover the entire viewport */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    background-attachment: fixed; /* Fix the background image so it doesn't scroll with the content */
+    background-image: url('bg.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
   }
     body {
       background-color: #FCF6F5;
