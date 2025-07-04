@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orgpulse-v1
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: orgpulse
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: orgpulse
+        version: v1
+    spec:
+      containers:
+      - name: orgpulse
+        image: orgpulse:v1
+        ports:
+        - containerPort: 80

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orgpulse-v2
+spec:
+  replicas: 1  # Start with small traffic
+  selector:
+    matchLabels:
+      app: orgpulse
+      version: v2
+  template:
+    metadata:
+      labels:
+        app: orgpulse
+        version: v2
+    spec:
+      containers:
+      - name: orgpulse
+        image: orgpulse:v2
+        ports:
+        - containerPort: 80
