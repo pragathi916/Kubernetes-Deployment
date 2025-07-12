@@ -1,7 +1,5 @@
 # Automated Deployment Strategies in Kubernetes
 
-In progress...
-
 - Implemented and compared various deployment strategies in Kubernetes, which are:
   1. Canary
   2. Blue-Green
